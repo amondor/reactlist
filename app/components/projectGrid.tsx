@@ -8,28 +8,42 @@ type Project = {
     codeLink: string;
   };
   const projects: Project[] = [
-    // {
-    //   id: 1,
-    //   title: 'Projet 1',
-    //   image: '../images/background.jpg',
-    //   previewLink: 'https://exemple1.com',
-    //   codeLink: 'https://github.com/exemple1',
-    // },
+    {
+      id: 1,
+      title: 'Versey',
+      image: '../images/background.jpg',
+      previewLink: 'https://versey.vercel.app/',
+      codeLink: 'https://github.com/amondor/Versey',
+    },
     
-    // {
-    //   id: 2,
-    //   title: 'Projet 2',
-    //   image: '../public/background.jpg',
-    //   previewLink: 'https://exemple2.com',
-    //   codeLink: 'https://github.com/exemple2',
-    // },
-    // {
-    //   id: 3,
-    //   title: 'Projet 3',
-    //   image: '../public/background.jpg',
-    //   previewLink: 'https://exemple3.com',
-    //   codeLink: 'https://github.com/exemple3',
-    // },
+    {
+      id: 2,
+      title: 'React Shop',
+      image: '../public/background.jpg',
+      previewLink: 'https://react-shop-amondor.vercel.app/',
+      codeLink: 'https://github.com/amondor/react-shop',
+    },
+    {
+      id: 3,
+      title: 'React Football',
+      image: '../public/background.jpg',
+      previewLink: 'https://react-football.vercel.app/',
+      codeLink: 'https://github.com/amondor/react-football',
+    },
+    {
+      id: 4,
+      title: 'Blog React',
+      image: '../public/background.jpg',
+      codeLink: 'https://github.com/amondor/blog-react',
+      previewLink: 'https://amondor.github.io/blog-react/',
+    },
+    {
+      id: 5,
+      title: 'Astro kitties',
+      image: '../public/background.jpg',
+      previewLink: 'https://astro-kitties.vercel.app/',
+      codeLink: 'https://github.com/amondor/check-test',
+    },
     // Ajoute d'autres projets ici
   ];
   
@@ -42,15 +56,26 @@ type Project = {
   
   function ProjectCard({ title, image, previewLink, codeLink }: ProjectCardProps) {
   return (
-    <div className="relative bg-cover bg-center rounded-lg overflow-hidden shadow-lg" style={{ backgroundImage: `url('${image}')'` }}>
+    <div className="bg-[url('./images/background.jpg')] h-[350px]  relative bg-cover bg-center 
+    rounded-lg overflow-hidden shadow-lg">
       dsmbhgvcfxdsz
       
       <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-between p-4">
         {/* Titre du projet */}
         <h2 className="text-white text-2xl font-bold">{title}</h2>
         <div className="flex justify-between items-center mt-4">
-          {/* Bouton Preview */}
+       
+          {/* Lien Code */}
           <a
+            href={codeLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white font-bold hover:text-gray-300"
+          >
+            Voir le code
+          </a>
+             {/* Bouton Preview */}
+             <a
             href={previewLink}
             target="_blank"
             rel="noopener noreferrer"
@@ -72,15 +97,6 @@ type Project = {
             </svg>
             Voir le projet
           </a>
-          {/* Lien Code */}
-          <a
-            href={codeLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white font-bold hover:text-gray-300"
-          >
-            Voir le code
-          </a>
         </div>
       </div>
     </div>
@@ -88,7 +104,8 @@ type Project = {
 }
 function ProjectGrid() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-8">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-8 md:w-3/4 mx-auto">
+    
       {projects.map((project) => (
         <ProjectCard
           key={project.id}
