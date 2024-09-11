@@ -54,7 +54,7 @@ type Project = {
     codeLink: string;
   };
   
-  function ProjectCard({ title, image, previewLink, codeLink }: ProjectCardProps) {
+  function ProjectCard({ title,  previewLink, codeLink }: ProjectCardProps) {
   return (
     <div className="bg-[url('./images/background.jpg')] h-[350px]  relative bg-cover bg-center 
     rounded-lg overflow-hidden shadow-lg">
