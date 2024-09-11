@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${aeonik.variable} antialiased text-deepgray` }
+        className={`${aeonik.variable} antialiased text-deepgray overflow-y-scroll ` }
       >
         {children}
       </body>

@@ -1,0 +1,105 @@
+import React from 'react'
+
+type Project = {
+    id: number;
+    title: string;
+    image: string;
+    previewLink: string;
+    codeLink: string;
+  };
+  const projects: Project[] = [
+    // {
+    //   id: 1,
+    //   title: 'Projet 1',
+    //   image: '../images/background.jpg',
+    //   previewLink: 'https://exemple1.com',
+    //   codeLink: 'https://github.com/exemple1',
+    // },
+    
+    // {
+    //   id: 2,
+    //   title: 'Projet 2',
+    //   image: '../public/background.jpg',
+    //   previewLink: 'https://exemple2.com',
+    //   codeLink: 'https://github.com/exemple2',
+    // },
+    // {
+    //   id: 3,
+    //   title: 'Projet 3',
+    //   image: '../public/background.jpg',
+    //   previewLink: 'https://exemple3.com',
+    //   codeLink: 'https://github.com/exemple3',
+    // },
+    // Ajoute d'autres projets ici
+  ];
+  
+  type ProjectCardProps = {
+    title: string;
+    image: string;
+    previewLink: string;
+    codeLink: string;
+  };
+  
+  function ProjectCard({ title, image, previewLink, codeLink }: ProjectCardProps) {
+  return (
+    <div className="relative bg-cover bg-center rounded-lg overflow-hidden shadow-lg" style={{ backgroundImage: `url('${image}')'` }}>
+      dsmbhgvcfxdsz
+      
+      <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-between p-4">
+        {/* Titre du projet */}
+        <h2 className="text-white text-2xl font-bold">{title}</h2>
+        <div className="flex justify-between items-center mt-4">
+          {/* Bouton Preview */}
+          <a
+            href={previewLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center text-green-500 font-bold hover:text-green-400"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5 mr-2"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M13 7l5 5m0 0l-5 5m5-5H6"
+              />
+            </svg>
+            Voir le projet
+          </a>
+          {/* Lien Code */}
+          <a
+            href={codeLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white font-bold hover:text-gray-300"
+          >
+            Voir le code
+          </a>
+        </div>
+      </div>
+    </div>
+  )
+}
+function ProjectGrid() {
+  return (
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-8">
+      {projects.map((project) => (
+        <ProjectCard
+          key={project.id}
+          title={project.title}
+          image={project.image}
+          previewLink={project.previewLink}
+          codeLink={project.codeLink}
+        />
+      ))}
+    </div>
+  );
+}
+
+export default ProjectGrid;
