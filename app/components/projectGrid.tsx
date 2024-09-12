@@ -44,6 +44,13 @@ type Project = {
       previewLink: 'https://astro-kitties.vercel.app/',
       codeLink: 'https://github.com/amondor/check-test',
     },
+    {
+      id: 5,
+      title: 'React Blog',
+      image: '../public/background.jpg',
+      previewLink: 'https://blog-react-vert.vercel.app/',
+      codeLink: 'https://github.com/amondor/blog-react',
+    },
     // Ajoute d'autres projets ici
   ];
   

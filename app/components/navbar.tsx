@@ -3,6 +3,7 @@ import { BiSolidChevronRightCircle } from "react-icons/bi";
 import { FaTwitter } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa6";
 import { GiThreePointedShuriken } from "react-icons/gi"; 
+import { FaLinkedin } from "react-icons/fa";
 export default function navbar() {
   return (
     <div className='z-[9999] pt-[0.6em] pl-[0.6em] pr-[0.6em] fixed inset-x-0 top-0'>
@@ -10,11 +11,14 @@ export default function navbar() {
 
     {/* Section droite : Liens des réseaux sociaux */}
     <div className="flex space-x-4 text-2xl md:mt-0 mt-10">
-      <a href="#" className="text-gray-700 hover:text-lightgreen">
+      <a href="https://github.com/amondor" className="text-gray-700 hover:text-lightgreen">
         <FaGithub />
       </a>
-      <a href="#" className="text-gray-700 hover:text-lightgreen">
+      <a href="https://x.com/Anwmdr" className="text-gray-700 hover:text-lightgreen">
         <FaTwitter />
+      </a>
+      <a href="https://www.linkedin.com/in/andrew-mondor/" className="text-gray-700 hover:text-lightgreen">
+        <FaLinkedin /> 
       </a>
     </div>
 
