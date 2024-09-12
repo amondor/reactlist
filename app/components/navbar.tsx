@@ -26,12 +26,14 @@ export default function navbar() {
     {/* Section gauche : "Available Now" + Bouton vert */}
     <div className="flex items-center space-x-4 mb-4 md:mb-0 mt-7 md:mt-0">
       <span className="flex items-center text-gray-700 text-sm md:text-base">
-        <GiThreePointedShuriken className='text-green-400 text-2xl mr-2' /> Available now
+        <GiThreePointedShuriken className='text-green-400 text-2xl mr-2 animate-spin' /> Available now
       </span>
-      <button className="flex items-center bg-darkgreen text-white px-4 py-2 font-bold rounded-lg text-sm md:text-base hover:bg-green-800">
+      <a href='mailto:mondor.andrew@gmail.com' className="flex items-center
+       bg-darkgreen text-white px-4 py-4 font-bold 
+      rounded-lg text-sm md:text-base hover:bg-green-800">
         Reach out
         <BiSolidChevronRightCircle className='text-lightgreen mx-2 text-2xl' />
-      </button>
+      </a>
     </div>
   </div>
 </div>
